@@ -6,6 +6,10 @@ const Park = function( name, ticketPrice) {
 
 Park.prototype.countDinos = function () {
     return this.dinoCollection.length;
+};
+
+Park.prototype.addDino = function (dino) {
+    this.dinoCollection.push(dino);
 
 };
 
