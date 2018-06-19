@@ -10,6 +10,10 @@ Park.prototype.countDinos = function () {
 
 Park.prototype.addDino = function (dino) {
     this.dinoCollection.push(dino);
+};
+
+Park.prototype.removeDino = function (dino) {
+    this.dinoCollection.pop(dino);
 
 };
 
