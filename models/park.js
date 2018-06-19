@@ -14,7 +14,18 @@ Park.prototype.addDino = function (dino) {
 
 Park.prototype.removeDino = function (dino) {
     this.dinoCollection.pop(dino);
-
 };
+
+// Park.prototype.calculateMostPopular = function () {
+//      dino1 = Dinosaur.guestsAttractedPerDay;
+//      dino2 = Dinosaur.guestsAttractedPerDay;
+//
+//     if (dino1 > dino2 ){
+//         return dino1;
+//     }
+//         else {
+//         return ; }
+//     }
+// }
 
 module.exports = Park;

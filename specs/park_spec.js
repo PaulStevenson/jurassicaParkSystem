@@ -8,12 +8,13 @@ describe('Park', function() {
     let dino1
 
   beforeEach(function () {
-      park = new Park( "Park 1", 10);
+      park = new Park( "Crater", 10);
       dino1 = new Dinosaur('t-rex', 'carnivore', 50);
+      dino2 = new Dinosaur('brachi', 'herbivore', 40);
   })
 
   it('should have a name', function () {
-      assert.strictEqual(park.name, "Park 1");
+      assert.strictEqual(park.name, "Crater");
   } );
 
   it('should have a ticket price', function () {
@@ -33,12 +34,22 @@ describe('Park', function() {
       park.addDino(dino1);
       park.removeDino(dino1);
       assert.deepStrictEqual( park.countDinos(), 0);
-
   });
 
-  it('should be able to find the dinosaur that attracts the most visitors');
+  xit('should be able to find the dinosaur that attracts the most visitors', function () {
+      park.addDino(dino1);
+      park.addDino(dino2);
+      const actualValue = park.calculateMostPopular();
+      assert.deepStrictEqual(actualValue, dino1);
+  });
 
-  it('should be able to find all dinosaurs of a particular species');
+  it('should be able to find all dinosaurs of a particular species', function () {
+      park.addDino(dino1);
+      park.addDino(dino2);
+      park.addDino(dino3);
+      const actualValue = park.groupDinoBySpecies();
+
+  });
 
   it('should be able to remove all dinosaurs of a particular species');
 
