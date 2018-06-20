@@ -19,16 +19,15 @@ Park.prototype.removeDino = function (dino) {
     this.dinoCollection.splice(index, 1);
 };
 
-// Park.prototype.calculateMostPopular = function () {
-//     dino1 = Dinosaur.guestsAttractedPerDay;
-//     dino2 = Dinosaur.guestsAttractedPerDay;
-//
-//     if (dino1 > dino2 ){
-//         return dino1;
-//      }
-//         else {
-//          return dino2;
-//      }
-// };
+Park.prototype.calculateMostPopular = function () {
+    let mostPopularDino = this.dinoCollection[0];
+
+    for(const dino of this.dinoCollection){
+        if (dino.guestsAttractedPerDay > mostPopularDino.guestsAttractedPerDay){
+            mostPopularDino = dino;
+        }
+    }
+    return mostPopularDino;
+};
 
 module.exports = Park;

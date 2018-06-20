@@ -39,7 +39,7 @@ describe('Park', function() {
       assert.deepStrictEqual( park.countDinos(), 1);
   });
 
-  xit('should be able to find the dinosaur that attracts the most visitors', function () {
+  it('should be able to find the dinosaur that attracts the most visitors', function () {
       park.addDino(dino1);
       park.addDino(dino2);
       const actualValue = park.calculateMostPopular();
