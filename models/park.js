@@ -13,19 +13,20 @@ Park.prototype.addDino = function (dino) {
 };
 
 Park.prototype.removeDino = function (dino) {
-    this.dinoCollection.pop(dino);
+    const removed = this.dinoCollection.indexOf(dino)
+    this.dinoCollection.pop(removed);
 };
 
 // Park.prototype.calculateMostPopular = function () {
-//      dino1 = Dinosaur.guestsAttractedPerDay;
-//      dino2 = Dinosaur.guestsAttractedPerDay;
+//     dino1 = Dinosaur.guestsAttractedPerDay;
+//     dino2 = Dinosaur.guestsAttractedPerDay;
 //
 //     if (dino1 > dino2 ){
 //         return dino1;
-//     }
+//      }
 //         else {
-//         return ; }
-//     }
-// }
+//          return dino2; }
+//      }
+// };
 
 module.exports = Park;

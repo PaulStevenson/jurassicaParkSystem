@@ -6,6 +6,8 @@ describe('Park', function() {
 
     let park;
     let dino1
+    let dino2
+
 
   beforeEach(function () {
       park = new Park( "Crater", 10);
@@ -32,8 +34,9 @@ describe('Park', function() {
 
   it('should be able to remove a dinosaur from its collection', function () {
       park.addDino(dino1);
+      park.addDino(dino2);
       park.removeDino(dino1);
-      assert.deepStrictEqual( park.countDinos(), 0);
+      assert.deepStrictEqual( park.countDinos(), 1);
   });
 
   xit('should be able to find the dinosaur that attracts the most visitors', function () {
@@ -43,10 +46,9 @@ describe('Park', function() {
       assert.deepStrictEqual(actualValue, dino1);
   });
 
-  it('should be able to find all dinosaurs of a particular species', function () {
+  xit('should be able to find all dinosaurs of a particular species', function () {
       park.addDino(dino1);
       park.addDino(dino2);
-      park.addDino(dino3);
       const actualValue = park.groupDinoBySpecies();
 
   });
