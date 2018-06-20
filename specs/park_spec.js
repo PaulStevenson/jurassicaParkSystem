@@ -33,8 +33,8 @@ describe('Park', function() {
   });
 
   it('should be able to remove a dinosaur from its collection', function () {
-      park.addDino(dino1);
       park.addDino(dino2);
+      park.addDino(dino1);
       park.removeDino(dino1);
       assert.deepStrictEqual( park.countDinos(), 1);
   });

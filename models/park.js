@@ -1,3 +1,5 @@
+const Dinosaur = require('../models/dinosaur.js');
+
 const Park = function( name, ticketPrice) {
     this.name = name;
     this.ticketPrice = ticketPrice;
@@ -13,8 +15,8 @@ Park.prototype.addDino = function (dino) {
 };
 
 Park.prototype.removeDino = function (dino) {
-    const removed = this.dinoCollection.indexOf(dino)
-    this.dinoCollection.pop(removed);
+    const index = this.dinoCollection.indexOf(dino)
+    this.dinoCollection.splice(index, 1);
 };
 
 // Park.prototype.calculateMostPopular = function () {
@@ -25,7 +27,7 @@ Park.prototype.removeDino = function (dino) {
 //         return dino1;
 //      }
 //         else {
-//          return dino2; }
+//          return dino2;
 //      }
 // };
 
